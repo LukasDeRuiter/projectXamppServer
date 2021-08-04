@@ -1,4 +1,7 @@
+<?php 
 
+$names = array("friends", "amigos", "vrienden", "broskis", "guildbros");
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +13,7 @@
 </head>
 <body>
     
-<h1><?php echo "Hello world, but this time its inside a h1 tag!" ?></h1>
+<h1><?php echo "Hello {$names[rand(0, 4)]}, but this time its inside a h1 tag!" ?></h1>
 
 </body>
 </html>
