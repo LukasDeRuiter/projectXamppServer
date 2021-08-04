@@ -1,3 +1,16 @@
 body{
     background-color: rgba(124, 124, 124, 0.5);
 }
+
+h1 {
+    margin: auto;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.textBlock{
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    border: 3px solid black;
+}
