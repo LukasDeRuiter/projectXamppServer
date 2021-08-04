@@ -1,6 +1,7 @@
 <?php 
 
 $names = array("friends", "amigos", "vrienden", "broskis", "guildbros");
+define("NAME", "Lukas");
 ?>
 
 <!DOCTYPE html>
@@ -14,6 +15,7 @@ $names = array("friends", "amigos", "vrienden", "broskis", "guildbros");
 <body>
     
 <h1><?php echo "Hello {$names[rand(0, 4)]}, but this time its inside a h1 tag!" ?></h1>
+<p><?php echo "My name is " . NAME ?></p>
 
 </body>
 </html>
