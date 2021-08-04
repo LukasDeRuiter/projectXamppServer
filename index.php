@@ -14,8 +14,8 @@ define("NAME", "Lukas");
 </head>
 <body>
     
-<h1><?php echo "Hello {$names[rand(0, 4)]}, but this time its inside a h1 tag!" ?></h1>
-<p><?php echo "My name is " . NAME ?></p>
+<h1><?php echo "Hello {$names[rand(0, 4)]}, but this time its inside a " . strtoupper("h") . "1 tag!" ?></h1>
+<p><?php echo "My name is " . NAME . " and my name is " . strlen(NAME) . " characters long."?></p>
 
 </body>
 </html>
