@@ -20,7 +20,13 @@ $amountOfNames = "This site has " . count($names) . " greetings, because I added
     
 <h1><?php echo "Hello {$names[rand(0, 4)]}, but this time its inside a " . strtoupper("h") . "1 tag!" ?></h1>
 <p><?php echo "My name is " . NAME . " and my name is " . strlen(NAME) . " characters long."?></p><br>
-<p><?php echo $amountOfNames ?></p>
+<p><?php echo $amountOfNames ?></p><br>
+<p><?php echo "All the greetings are: "?></p>
+<?php 
+for($i = 0; $i < count($names); $i++) {
+    echo "<p>{$names[$i]}</p>";
+}
+?>
 
 </body>
 </html>
