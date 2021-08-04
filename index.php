@@ -2,6 +2,10 @@
 
 $names = array("friends", "amigos", "vrienden", "broskis", "guildbros");
 define("NAME", "Lukas");
+
+array_push($names, "compadres");
+
+$amountOfNames = "This site has " . count($names) . " greetings, because I added " . $names[count($names) - 1] . " in the php code";
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +19,8 @@ define("NAME", "Lukas");
 <body>
     
 <h1><?php echo "Hello {$names[rand(0, 4)]}, but this time its inside a " . strtoupper("h") . "1 tag!" ?></h1>
-<p><?php echo "My name is " . NAME . " and my name is " . strlen(NAME) . " characters long."?></p>
+<p><?php echo "My name is " . NAME . " and my name is " . strlen(NAME) . " characters long."?></p><br>
+<p><?php echo $amountOfNames ?></p>
 
 </body>
 </html>
