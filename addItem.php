@@ -45,6 +45,12 @@ if(isset($_POST['submit'])) {
             $type = "";
         }
     }
+
+    if($nameError == "" && $numberError == "" && $typeError == "") {
+        header('Location: index.php');
+    } else{
+        echo "Form is not filled in correctly!";
+    }
 }
 ?>
 
