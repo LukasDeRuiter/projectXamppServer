@@ -16,14 +16,8 @@ function squareNumber($number) {
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="firstProject.css">
-    <title>First xampp idea</title>
-</head>
-<body>
+
+<?php include('templates/header.php');?>
     
 <h1><?php echo "Hello {$names[rand(0, 4)]}, but this time its inside a " . strtoupper("h") . "1 tag!" ?></h1>
 
@@ -40,7 +34,8 @@ for($i = 0; $i < count($names); $i++) {
 ?>
 </ul>
 </div>
+ 
+<?php include('templates/footer.php');?>
 
-</body>
 </html>
 
