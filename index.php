@@ -12,6 +12,12 @@ function squareNumber($number) {
     return pow($number, 2);
 }
 
+$connection = mysqli_connect('localhost', 'lukasderuiter', 'thisisreplacedforsafety', 'project_pokedex');
+
+if(!$connection) {
+    echo "error: " . mysqli_connect_error();
+}
+
 ?>
 
 <!DOCTYPE html>
