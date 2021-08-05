@@ -1,31 +1,43 @@
 <?php
 
-if(isset($_POST['submit'])) {
-    //echo htmlspecialchars($_POST['name']);
-    //echo htmlspecialchars($_POST['number']);
-    //echo htmlspecialchars($_POST['type']);
-}
-
 $nameError = "";
 $numberError = "";
 $typeError = "";
 
-if(empty($_POST['name'])) {
-    $nameError = "A name is required!";
-} else {
-    $nameError = "";
-}
+if(isset($_POST['submit'])) {
+    //echo htmlspecialchars($_POST['name']);
+    //echo htmlspecialchars($_POST['number']);
+    //echo htmlspecialchars($_POST['type']);
+    
+    if(empty($_POST['name'])) {
+        $nameError = "A name is required!";
+    } else {
+        $nameError = "";
+        $name = $_POST['name'];
+        if(!preg_match('/^[a-zA-Z\s]+$/', $name)) {
+            $nameError = "Please enter a name using only lowercase and uppercase letters!";
+        }
+    }
 
-if(empty($_POST['number'])) {
-    $numberError = "A number is required!";
-} else {
-    $numberError = "";
+    if(empty($_POST['number'])) {
+        $numberError = "A number is required!";
+    } else {
+        $numberError = "";
+        $number = $_POST['number'];
+        if(!filter_var($number, FILTER_VALIDATE_INT)) {
+            $numberError = "Please enter a number!";
+    }
 }
-
-if(empty($_POST['type'])) {
-    $typeError = "A type is required!";
-} else {
-    $typeError = "";
+    
+    if(empty($_POST['type'])) {
+        $typeError = "A type is required!";
+    } else {
+        $typeError = "";
+        $type = $_POST['type'];
+        if(!preg_match('/^[a-zA-Z\s]+$/', $type)) {
+            $typeError = "Please enter a type using only lowercase and uppercase letters!";
+        }
+    }
 }
 ?>
 
