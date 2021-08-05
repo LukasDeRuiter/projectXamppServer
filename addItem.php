@@ -4,6 +4,10 @@ $nameError = "";
 $numberError = "";
 $typeError = "";
 
+$name = "";
+$number= "";
+$type = "";
+
 if(isset($_POST['submit'])) {
     //echo htmlspecialchars($_POST['name']);
     //echo htmlspecialchars($_POST['number']);
@@ -16,6 +20,7 @@ if(isset($_POST['submit'])) {
         $name = $_POST['name'];
         if(!preg_match('/^[a-zA-Z\s]+$/', $name)) {
             $nameError = "Please enter a name using only lowercase and uppercase letters!";
+            $name = "";
         }
     }
 
@@ -26,6 +31,7 @@ if(isset($_POST['submit'])) {
         $number = $_POST['number'];
         if(!filter_var($number, FILTER_VALIDATE_INT)) {
             $numberError = "Please enter a number!";
+            $number= "";
     }
 }
     
@@ -36,6 +42,7 @@ if(isset($_POST['submit'])) {
         $type = $_POST['type'];
         if(!preg_match('/^[a-zA-Z\s]+$/', $type)) {
             $typeError = "Please enter a type using only lowercase and uppercase letters!";
+            $type = "";
         }
     }
 }
@@ -49,13 +56,13 @@ if(isset($_POST['submit'])) {
 <form class="addPokemonForm" method="POST" action="additem.php">
 <h2 class="formTitle">Add a new pokedex entry here!</h2>
 <label class="formLabel">Name your pokedéx entry:</label>
-<input type="text" name="name" class="pokeInputField">
+<input type="text" name="name" class="pokeInputField" value="<?php echo htmlspecialchars($name) ?>">
 <p class="inputError"><?php echo $nameError ?></p>
 <label class="formLabel">Give its number:</label>
-<input type="text" name="number" class="pokeInputField">
+<input type="text" name="number" class="pokeInputField" value="<?php echo htmlspecialchars($number) ?>">
 <p class="inputError"><?php echo $numberError ?></p>
 <label class="formLabel">Add type:</label>
-<input type="text" name="type" class="pokeInputField">
+<input type="text" name="type" class="pokeInputField" value="<?php echo htmlspecialchars($type) ?>">
 <p class="inputError"><?php echo $typeError ?></p>
 <input type="submit" name="submit" value="submit" class="submitBtn">
 
