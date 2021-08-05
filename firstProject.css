@@ -67,9 +67,32 @@ nav{
 .addPokemonForm{
     display: flex;
     flex-direction: column;
-    width: 40%;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 50%;
     margin: auto;
+    margin-top: 1.5rem;
+    padding: 0.5rem;
     border: 3px solid black;
+    font-family: 'Old Standard TT', serif;
+}
+
+.formTitle{
+    font-size: 4rem;
+    text-align: center;
+}
+
+.inputLabel{
+    font-size: 2rem;
+}
+
+.pokeInputField{
+    margin-bottom: 1rem;
+}
+
+.submitBtn{
+    width: 8rem;
+    height: 4rem;
+    margin: auto;
 }
 
 .footerText{
