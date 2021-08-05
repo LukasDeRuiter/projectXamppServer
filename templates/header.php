@@ -12,9 +12,11 @@
     <div class="titles">PHP tryout</div>
 
     <div class="links">
-        <div class="navButton">Home</div>
+        <a href="index.php"><div class="navButton">Home</div></a>
         <div class="navButton">About</div>
         <div class="navButton">Contact</div>
 </div>
+
+<a href="additem.php"><div class="addPokemonBtn">Add pokemon</div></a>
 
 </nav>

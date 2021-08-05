@@ -44,6 +44,7 @@ nav{
     width: 12rem;
     display: flex;
     margin-left: 20rem;
+    margin-right: 10rem;
     margin-top: 0rem;
     line-height: 2.5rem;
 }
@@ -62,6 +63,23 @@ nav{
 .navButton:hover{
     transition-duration: 0.3s;
     background-color: rgb(142, 216, 142);
+}
+
+.addPokemonBtn {
+    color: white;
+    border: 0.2rem rgb(26, 127, 134) solid;
+    border-radius: 5px;
+    background-color: rgb(41, 191, 202);
+    width: 10rem;
+    margin-top: 0rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    line-height: 2.5rem;
+}
+
+.addPokemonBtn:hover{
+    transition-duration: 0.3s;
+    background-color: rgb(163, 220, 224)
 }
 
 .addPokemonForm{
