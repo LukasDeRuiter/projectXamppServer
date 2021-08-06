@@ -1,5 +1,7 @@
 <?php
 
+include('config/db_connect.php');
+
 $nameError = "";
 $numberError = "";
 $typeError = "";
@@ -47,7 +49,18 @@ if(isset($_POST['submit'])) {
     }
 
     if($nameError == "" && $numberError == "" && $typeError == "") {
-        header('Location: index.php');
+        $number = mysqli_real_escape_string($connection, $_POST['number']);
+        $name = mysqli_real_escape_string($connection, $_POST['name']);
+        $type = mysqli_real_escape_string($connection, $_POST['type']);
+
+        $sql = "INSERT INTO pokemon(id,name,type) VALUES('$number', '$name', '$type')";
+
+        if(mysqli_query($connection, $sql)) {
+            mysqli_close($connection);
+            header('Location: index.php');
+        } else {
+            echo "Error with database connection: " . mysqli_error($connection);
+        }
     } else{
         echo "Form is not filled in correctly!";
     }
