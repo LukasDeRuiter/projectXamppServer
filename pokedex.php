@@ -25,6 +25,7 @@ include('config/db_connect.php');
                 </ul>
                 
                 <p><?php echo htmlspecialchars($pokemon['time']);?></p>
+                <a href="details.php?id=<?php echo $pokemon['id']?>"><div class="moreDetailsBtn">More info</div></a>
             </div>
             <?php endforeach; ?>
         </div>
