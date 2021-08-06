@@ -40,7 +40,7 @@ if(isset($_POST['submit'])) {
     } else {
         $typeError = "";
         $type = $_POST['type'];
-        if(!preg_match('/^[a-zA-Z\s]+$/', $type)) {
+        if(!preg_match('/^([a-zA-Z\s]+)(,\s*[a-zA-Z\s]*)*$/', $type)) {
             $typeError = "Please enter a type using only lowercase and uppercase letters!";
             $type = "";
         }
