@@ -13,7 +13,7 @@
 
     <div class="links">
         <a href="index.php"><div class="navButton">Home</div></a>
-        <div class="navButton">About</div>
+        <a href="pokedex.php"><div class="navButton">Pokedex</div></a>
         <div class="navButton">Contact</div>
 </div>
 
