@@ -127,13 +127,16 @@ a{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 10rem;
+    width: 105rem;
+    margin: auto;
     margin-top: 2rem;
+    padding: 0.2rem;
     background-color: rgba(255, 255, 255, 0.1);
 }
 
 .pokedexUnit{
     background-color: rgb(24, 130, 179);
+    width: 15rem;
     border: 2px solid black;
     border-radius: 5px;
     padding: 0.5rem;
@@ -150,4 +153,21 @@ a{
    margin: auto;
    margin-bottom: 0.5rem;
    margin-top: 0.5rem; 
+}
+
+.pokeballsvg{
+    transition-duration: 500ms;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+}
+
+
+.pokeballsvg:hover{
+    transition-duration: 500ms;
+    transform-origin: 50% 50%;
+    transform: scale(1.5, 1.5);
+}
+
+.pokeballText {
+    font-size: 3rem;
 }
