@@ -2,6 +2,18 @@
 
 include('config/db_connect.php');
 
+if(isset($_POST['delete'])) {
+    $idDelete =  mysqli_real_escape_string($connection, $_POST['id_delete']);
+
+    $sql = "DELETE FROM pokemon WHERE id = $idDelete";
+
+    if(mysqli_query($connection, $sql)) {
+        header('Location: index.php');
+    } else {
+        echo "Error with connection to database: " . mysqli_error($connection);
+    }
+}
+
 if(isset($_GET['id'])) {
 
     $id = mysqli_real_escape_string($connection, $_GET['id']);
@@ -32,6 +44,12 @@ if(isset($_GET['id'])) {
     <p><b>Pokedex entry number: </b><?php echo htmlspecialchars($yourPokemon['id']);?></p>
     <p><b>Type: </b><?php echo htmlspecialchars($yourPokemon['type']);?></p>
     <p><b>Date created: </b><?php echo htmlspecialchars($yourPokemon['time']);?></p>
+
+
+    <form action="details.php" method="POST">
+        <input type="hidden" name="id_delete" value="<?php echo $yourPokemon['id'] ?>">
+        <input type="submit" name="delete" value="Delete">
+    </form>
 
 
     <?php } else { ?>
