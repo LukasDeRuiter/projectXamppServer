@@ -1,6 +1,6 @@
 <?php
 
-$connection = mysqli_connect('localhost', 'lukasderuiter', 'test650411', 'project_pokedex');
+$connection = mysqli_connect('localhost', 'lukasderuiter', 'replaced', 'project_pokedex');
 
 if(!$connection) {
     echo "error: " . mysqli_connect_error();

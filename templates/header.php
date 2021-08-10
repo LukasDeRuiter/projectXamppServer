@@ -14,7 +14,7 @@
     <div class="links">
         <a href="index.php"><div class="navButton">Home</div></a>
         <a href="pokedex.php"><div class="navButton">Pokedex</div></a>
-        <div class="navButton">Contact</div>
+        <a href="https://lukasderuiter.github.io/LukasdeRuiter/"><div class="navButton">Contact</div></a>
 </div>
 
 <a href="additem.php"><div class="addPokemonBtn">Add pokemon</div></a>
