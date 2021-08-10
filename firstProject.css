@@ -80,6 +80,7 @@ text-shadow: 2px 2px gray;
     padding-left: 1rem;
     padding-right: 1rem;
     cursor: pointer;
+    transition-duration: 500ms;
 }
 
 .navButton:hover{
@@ -97,46 +98,12 @@ text-shadow: 2px 2px gray;
     padding-left: 1rem;
     padding-right: 1rem;
     line-height: 2.5rem;
+    transition-duration: 500ms;
 }
 
 .addPokemonBtn:hover{
     transition-duration: 0.3s;
     background-color: rgb(163, 220, 224)
-}
-
-.addPokemonForm{
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.2);
-    width: 50%;
-    margin: auto;
-    margin-top: 1.5rem;
-    padding: 0.5rem;
-    border: 3px solid black;
-    font-family: 'Old Standard TT', serif;
-}
-
-.formTitle{
-    font-size: 4rem;
-    text-align: center;
-}
-
-.inputLabel{
-    font-size: 2rem;
-}
-
-.pokeInputField{
-    margin-bottom: 1rem;
-}
-
-.inputError{
-    color: red;
-}
-
-.submitBtn{
-    width: 8rem;
-    height: 4rem;
-    margin: auto;
 }
 
 /* Pokedex */
@@ -162,6 +129,7 @@ text-shadow: 2px 2px gray;
     border: 2px solid black;
     border-radius: 5px;
     padding: 0.5rem;
+    transition-duration: 500ms;
 }
 
 .pokedexUnit:hover{
@@ -221,12 +189,70 @@ text-shadow: 2px 2px gray;
     border: 3px solid black;
     border-radius: 10px;
     cursor: pointer;
+    transition-duration: 500ms;
 }
 
 .deleteBtn:hover{
     transition-duration: 500ms;
     background-color: rgba(255, 0, 0, 0.75);
 }
+
+/* Add pokemon page */
+
+.addPokemonForm{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 50%;
+    margin: auto;
+    margin-top: 1.5rem;
+    padding: 0.5rem;
+    border: 3px solid black;
+    font-family: 'Old Standard TT', serif;
+}
+
+.formTitle{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2rem;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.inputLabel{
+    font-size: 2rem;
+}
+
+.pokeInputField{
+    margin-bottom: 1rem;
+}
+
+.inputError{
+    color: red;
+}
+
+.submitBtn{
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(42, 169, 207, 0.5);
+    font-family: 'Old Standard TT', serif;
+    font-size: 2rem;
+    width: 8rem;
+    height: 4rem;
+    margin: auto;
+    border: 0px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    transition-duration: 500ms;
+    transform: scale(1, 1);
+}
+
+.submitBtn:hover{
+    transition-duration: 500ms;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(42, 169, 207, 1);
+    transform: scale(1.5, 1.5);
+    box-shadow: 0 0 20px rgba(42, 169, 207, 1);
+}
+
 
 .footerText{
    font-size: 1.5rem;
