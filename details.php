@@ -36,11 +36,12 @@ if(isset($_GET['id'])) {
 
 <?php include('templates/header.php') ?>
 
-<h2>Details</h2>
+<h1>Details</h1>
 
 <?php if($yourPokemon) { ?>
 
-    <h4><?php echo htmlspecialchars($yourPokemon['name']);?></h4>
+    <div class="unitContainer">
+    <h4 class="unitName"><?php echo htmlspecialchars($yourPokemon['name']);?></h4>
     <p><b>Pokedex entry number: </b><?php echo htmlspecialchars($yourPokemon['id']);?></p>
     <p><b>Type: </b><?php echo htmlspecialchars($yourPokemon['type']);?></p>
     <p><b>Date created: </b><?php echo htmlspecialchars($yourPokemon['time']);?></p>
@@ -48,9 +49,9 @@ if(isset($_GET['id'])) {
 
     <form action="details.php" method="POST">
         <input type="hidden" name="id_delete" value="<?php echo $yourPokemon['id'] ?>">
-        <input type="submit" name="delete" value="Delete">
+        <input type="submit" name="delete" value="Delete" class="">
     </form>
-
+    </div>
 
     <?php } else { ?>
 
