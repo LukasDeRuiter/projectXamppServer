@@ -1,5 +1,7 @@
 body{
     background-color: rgba(124, 124, 124, 0.5);
+    background-image: url("assets/background1.png");
+    background-attachment: fixed;
 }
 
 h1 {
@@ -26,11 +28,21 @@ a{
     justify-content: center;
 }
 
+/* index.php page   */
+.title{
+font-size: 5rem;
+margin-top: 1rem;
+}
+
 .textBlock{
     width: 40%;
     margin: auto;
+    padding: 2rem 4rem;
     text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2rem;
     border: 3px solid black;
+    border-radius: 10px;
 }
 
 .titles{

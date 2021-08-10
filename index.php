@@ -19,7 +19,7 @@ function squareNumber($number) {
 
 <?php include('templates/header.php');?>
     
-<h1><?php echo "Hello {$names[rand(0, 4)]}, but this time its inside a " . strtoupper("h") . "1 tag!" ?></h1>
+<h1 class="title"><?php echo "Hello {$names[rand(0, 4)]}, but this time its inside a " . strtoupper("h") . "1 tag!" ?></h1>
 
 <div class="textBlock">
 <p><?php echo "My name is " . NAME . " and my name is " . strlen(NAME) . " characters long."?></p><br>
@@ -33,6 +33,7 @@ for($i = 0; $i < count($names); $i++) {
 }
 ?>
 </ul>
+<p>Also, welcome to my pokedex project! Here you can check the pokedex and add more pokemon, which are stored in a mysql database!</p>
 </div>
  
 <?php include('templates/footer.php');?>
