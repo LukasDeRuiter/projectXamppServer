@@ -36,7 +36,7 @@ if(isset($_GET['id'])) {
 
 <?php include('templates/header.php') ?>
 
-<h1>Details</h1>
+<h1 class="title">Details</h1>
 
 <?php if($yourPokemon) { ?>
 
@@ -49,7 +49,7 @@ if(isset($_GET['id'])) {
 
     <form action="details.php" method="POST">
         <input type="hidden" name="id_delete" value="<?php echo $yourPokemon['id'] ?>">
-        <input type="submit" name="delete" value="Delete" class="">
+        <input type="submit" name="delete" value="Delete" class="deleteBtn">
     </form>
     </div>
 

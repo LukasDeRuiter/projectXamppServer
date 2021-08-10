@@ -212,6 +212,22 @@ text-shadow: 2px 2px gray;
     text-align: center;
 }
 
+.deleteBtn{
+    background-color: rgba(255, 0, 0, 0.15);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1rem;
+    width: 8rem;
+    height: 4rem;
+    border: 3px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.deleteBtn:hover{
+    transition-duration: 500ms;
+    background-color: rgba(255, 0, 0, 0.75);
+}
+
 .footerText{
    font-size: 1.5rem;
    width: 40%;
