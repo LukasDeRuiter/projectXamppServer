@@ -9,26 +9,22 @@ include('config/db_connect.php');
 
 <?php include('templates/header.php') ?>
 
-<?php echo "Amount of pokemon added: " . count($fullPokedex) ?>
+<h1 class="title">Pokedex</h1>
 
 <div class="pokedexContainer">
     <?php foreach($fullPokedex as $pokemon):  ?>
         <div class="pokedexUnit">
-            <h6><?php echo htmlspecialchars($pokemon['name']);?></h6>
-            <p><?php echo htmlspecialchars($pokemon['id']);?></p>
+            <h6 class="name"><?php echo htmlspecialchars($pokemon['name']);?></h6>
+            <p class="idText"><?php echo "Index nr: " . htmlspecialchars($pokemon['id']);?></p>
 
             <ul>
                 <?php foreach(explode(',', $pokemon['type']) as $type): ?>
-                    <li><?php echo $type ?></li>
+                    <li class="type"><?php echo $type ?></li>
                     
                     <?php endforeach; ?>
                 </ul>
                 
-                <p><?php echo htmlspecialchars($pokemon['time']);?></p>
-                
-            
-                
-                <a href="details.php?id=<?php echo $pokemon['id']?>">
+                <a href="details.php?id=<?php echo $pokemon['id']?>" class="pokedexLink">
                 <svg width="100" height="100" viewBox="0 0 210 297" version="1.1" id="svg5" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" class="pokeballsvg">
                 <defs id="defs2" />
                 <g id="layer1">
@@ -43,9 +39,14 @@ include('config/db_connect.php');
                 </svg>
             
             </a>
+
+            <p><?php echo "Added to pokedex on: " . htmlspecialchars($pokemon['time']);?></p>
+
             </div>
             <?php endforeach; ?>
         </div>
+        
+        <h3 class="pokedexCounter"><?php echo "Amount of pokemon added: " . count($fullPokedex) ?></h3>
 
 <?php include('templates/footer.php') ?>
 
